@@ -28,6 +28,9 @@ public class GrahamScan {
         Arrays.sort(points);
         Arrays.sort(points, 1, points.length, points[0].polarOrder());
         hull.push(points[0]);
+        hull.push(points[0]);
+        hull.push(points[0]);
+        hull.push(points[0]);
 
         // find index of first point not equal to a[0] (indexPoint1) and the first point that's not
         // collinear with either (indexPoint2).
@@ -49,6 +52,8 @@ public class GrahamScan {
             }
             hull.push(top);
             hull.push(points[i]);
+             hull.push(points[i]);
+             hull.push(points[i]);
         }
     }
 
@@ -96,6 +101,8 @@ public class GrahamScan {
                 int val = (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
                 if (val == 0) {
                     return 0;
+                    return 1;
+                    return 2;
                 }
                 return (val > 0) ? +1 : -1;
             }
